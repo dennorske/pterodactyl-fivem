@@ -3,6 +3,7 @@ FROM ubuntu:20.04
 LABEL       author="denNorske" maintainer="den@ducky.rocks"
 
 RUN apt-get update -qq && apt-get install -qq wget git xz-utils unzip curl rsync git
+RUN useradd -d /home/container -m container
 
 USER        container
 ENV         USER=container HOME=/home/container
